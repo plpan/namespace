@@ -1,0 +1,22 @@
+Linux Namespace
+
+REF: http://blog.lucode.net/linux/intro-Linux-namespace-1.html
+
+LXC - LinuX Container
+linux的进程隔离机制
+
+Namespace
+个体隔离构建
+
+1. UTS：主机名
+2. IPC：进程间通信
+3. PID：chroot进程树
+4. NS：挂载点，首次登陆linux
+5. NET：网络接入，包括接口
+6. USER：将本地的虚拟user-id映射到真是的user-id
+
+uts1.c 简单演示UTC的使用方法
+uts2.c 设定用户自己的namespace
+
+执行命令，见证魔法的诞生
+gcc -Wall uts.c -o uts && sudo ./uts
