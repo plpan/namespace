@@ -21,5 +21,8 @@ uts2.c 设定用户自己的namespace
 [2] ipc
 ipc.c 通过pipe简单演示ipc的使用方法
 
+[3] pid
+pid.c 重置PID技术，得到自己的"1"进程
+
 执行命令，见证魔法的诞生
 gcc -Wall uts.c -o uts && sudo ./uts
