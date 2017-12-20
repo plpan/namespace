@@ -1,5 +1,6 @@
 uts/uts
 ipc/ipc
 pid/pid
+ns/ns
 
 *.swp
