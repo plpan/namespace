@@ -28,8 +28,11 @@ pid.c 重置PID技术，得到自己的"1"进程
 ns.c 隔离挂载表，pid虽然创建了自己的"1"进程，但是仍然是使用系统本身的/proc文件系统，而ns则能实现真正的隔离
 	 此时，我们已经得到了一个干净的空间了，吊吊吊
 	 当然，现在也可以重新挂载一些基本的文件系统了
-	 	当我们执行cat /proc/self/mountinfo时，发现挂载还是shared，CLONE_NEWUTS对包含shared标志的挂载表并不能实现隔离
+	 	1. 当我们执行cat /proc/self/mountinfo时，发现挂载还是shared，CLONE_NEWUTS对包含shared标志的挂载表并不能实现隔离
 		解决方法，删除代码中的mount命令，改用 mount --make-private -t proc proc /proc
+		2. 因为我实在vagrant测试，当执行ps aux报错(Error, do this: mount -t proc proc /proc)时，我们需要重新挂载
+		如果重新挂载，执行vagrant ssh将登陆不上虚拟机
+		解决方法，执行上面的命令
 
 [5] net
 net.c 隔离网络
