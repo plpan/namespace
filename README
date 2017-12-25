@@ -41,6 +41,8 @@ net.c 隔离网络
 
 [6] user
 user1.c 检测系统对USER_NS的支持(很抱歉，我的虚拟机不支持。。。)
+user2.c 如果系统支持USER_NS，则能够创建一个容器出来
+	 这里面有很多限制条件，请查阅intro-Linux-namespace-6文章
 
 执行命令，见证魔法的诞生
 gcc -Wall uts.c -o uts && sudo ./uts
