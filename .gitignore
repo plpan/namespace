@@ -3,5 +3,6 @@ ipc/ipc
 pid/pid
 ns/ns
 net/net
+user/user
 
 *.swp

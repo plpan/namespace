@@ -1,7 +1,9 @@
 Linux Namespace
-个体隔离构建
+隔离容器构建：经过以下六步，我们可以构建出一个完全隔离的bash，或者说是容器
 
 REF: http://blog.lucode.net/linux/intro-Linux-namespace-1.html
+REF: http://blog.lucode.net/linux/intro-Linux-namespace-X.html
+REF: http://blog.lucode.net/linux/intro-Linux-namespace-6.html
 REF(strong): https://www.kernel.org/doc/Documentation/
 
 LXC - LinuX Container
@@ -36,6 +38,9 @@ ns.c 隔离挂载表，pid虽然创建了自己的"1"进程，但是仍然是使
 
 [5] net
 net.c 隔离网络
+
+[6] user
+user1.c 检测系统对USER_NS的支持(很抱歉，我的虚拟机不支持。。。)
 
 执行命令，见证魔法的诞生
 gcc -Wall uts.c -o uts && sudo ./uts
