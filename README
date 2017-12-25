@@ -45,4 +45,4 @@ user2.c 如果系统支持USER_NS，则能够创建一个容器出来
 	 这里面有很多限制条件，请查阅intro-Linux-namespace-6文章
 
 执行命令，见证魔法的诞生
-gcc -Wall uts.c -o uts && sudo ./uts
+gcc -Wall TYPE/CODE.c -o TYPE/CODE && sudo TYPE/CODE
